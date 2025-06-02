@@ -12,7 +12,9 @@ router.get("/borrowed",(req,res)=>{
 
 
 router.post("/return/:bookId",(req,res)=>{
-  res.status(200).send("return borrowed book")
+  const id = req.params.bookId
+  res.status(200).send(`Return book with id : ${id}`)
 })
+
 
 export default router
